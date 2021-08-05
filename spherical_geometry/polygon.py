@@ -604,7 +604,7 @@ class SingleSphericalPolygon(object):
             midpoint = great_circle_arc.midpoint(A, C)
             # candidate = max(zip(orient, midpoint), key=lambda x: x[0])
             # inside = candidate[1]
-	 avgmid=np.mean(np.array(midpoint),axis=0)
+	    avgmid=np.mean(np.array(midpoint),axis=0)
             vector.normalize_vector(avgmid, output=avgmid)
             candidate = max(zip(orient, midpoint), key=lambda x: x[0])
             # candidate[1] is the original ouput but avgmid gives more stable results
